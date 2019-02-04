@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2935315931397578782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2935315931397578769}
+  - component: {fileID: 2935315931397578768}
+  m_Layer: 0
+  m_Name: LASAgent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2935315931397578769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935315931397578782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2935315931397578768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935315931397578782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c1e323ad6c440dfb281e50a883886a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: f5e88b171f8b340bf9a56b35be5097b0, type: 2}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 10
+  csvFile: {fileID: 4900000, guid: 827e1b32df98a42f1b312798d5bfead3, type: 3}
+  prefab: {fileID: 4369379177345263771, guid: dfb47f1d7eb1c418f825e5d320720bee, type: 3}
+  nodeNum: 0
+  nodeList: []
+  irList: []
+  ledList: []
