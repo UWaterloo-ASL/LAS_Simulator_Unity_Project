@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -284, y: 201}
+  m_AnchoredPosition: {x: -378, y: 201}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821385972
@@ -548,7 +548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421, y: 41}
+  m_AnchoredPosition: {x: 556, y: -23}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893439884
@@ -684,7 +684,17 @@ PrefabInstance:
     - target: {fileID: 8892101019769478913, guid: f5ea51a7074344a198f5e8a4d2a03d5f,
         type: 3}
       propertyPath: trainingConfiguration.qualityLevel
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892101019769478913, guid: f5ea51a7074344a198f5e8a4d2a03d5f,
+        type: 3}
+      propertyPath: trainingConfiguration.width
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892101019769478913, guid: f5ea51a7074344a198f5e8a4d2a03d5f,
+        type: 3}
+      propertyPath: trainingConfiguration.height
+      value: 720
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ea51a7074344a198f5e8a4d2a03d5f, type: 3}
@@ -892,7 +902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 437, y: -323}
+  m_AnchoredPosition: {x: 569, y: -342}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264681495
@@ -981,15 +991,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.4
+    x: 0.45
     y: 0.5
-    width: 0.6
+    width: 0.55
     height: 0.5
   near clip plane: 0.3
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 13
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1013,7 +1023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791398802}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -0.01, y: 26.590794, z: 2.13}
+  m_LocalPosition: {x: -0.01, y: 26.590794, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
