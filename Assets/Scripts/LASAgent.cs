@@ -80,6 +80,7 @@ public class LASAgent : Agent
         }
     }
 
+    // Get Observation
     public override void CollectObservations()
     {
         foreach (GameObject ir in irList)
@@ -91,6 +92,7 @@ public class LASAgent : Agent
         }
     }
 
+    // Take Action and Add Reward
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         // Clamp the values of action into [-1, 1]
@@ -113,7 +115,7 @@ public class LASAgent : Agent
         // Take Actions on SMAs
         for(int i = 0; i < smaNum; i += 1)
         {
-            smaList[i].GetComponent<Animate_SMA_Color>().SetSMAAction(vectorAction[ledNum+i]);
+            smaList[i].GetComponent<AnimateSMAContraction>().SetSMAAction(vectorAction[ledNum + i]);
         }
 
         // Reward functioon
@@ -138,6 +140,7 @@ public class LASAgent : Agent
     // Update is called once per frame
     void Update()
     {
+        // Controll all LEDs
         if (Input.GetKeyDown(KeyCode.W))
         {
             for (int i = 0; i < ledList.Count(); i += 1)
@@ -152,18 +155,21 @@ public class LASAgent : Agent
                 ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(0.0f);
             }
         }
+
+        // Controll all SMAs
         if (Input.GetKeyDown(KeyCode.A))
         {
             for (int i = 0; i < smaList.Count(); i += 1)
             {
-                smaList[i].GetComponent<Animate_SMA_Color>().SetSMAAction(1);
+                smaList[i].GetComponent<AnimateSMAContraction>().SetSMAAction(1);
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             for (int i = 0; i < smaList.Count(); i += 1)
             {
-                smaList[i].GetComponent<Animate_SMA_Color>().SetSMAAction(0);
+                //smaList[i].transform.Find("bend").GetComponent<Bend>().curvature = 0;
+                smaList[i].GetComponent<AnimateSMAContraction>().SetSMAAction(0);
             }
         }
     }
