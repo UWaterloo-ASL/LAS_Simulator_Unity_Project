@@ -93,20 +93,38 @@ public class LASAgent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+        // Clamp the values of action into [-1, 1]
+        for(int i = 0; i < vectorAction.Length; i += 1)
+        {
+            vectorAction[i] = Mathf.Clamp(vectorAction[i], -1, 1);
+        }
+
         int ledNum = ledList.Count;
         int smaNum = smaList.Count;
         Debug.Log(string.Format("length of LED: {0}", ledNum));
         Debug.Log(string.Format("length of SMA: {0}", smaNum));
+
         // Take Actions on LEDs
         for(int i = 0; i < ledNum; i += 1)
         {
             ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(vectorAction[i]);
         }
+
         // Take Actions on SMAs
         for(int i = 0; i < smaNum; i += 1)
         {
             smaList[i].GetComponent<Animate_SMA_Color>().SetSMAAction(vectorAction[ledNum+i]);
         }
+
+        // Reward functioon
+        float[] irReading = new float[irList.Count];
+        for(int i = 0; i < irList.Count; i += 1)
+        {
+            irReading[i] = irList[i].transform.Find("IR Detection Area").GetComponent<IRDistanceCalculate>().GetIRReading();
+        }
+        float reward_value = irReading.Sum();
+        AddReward(reward_value);
+        Debug.Log(string.Format("reward={0}", reward_value));
     }
 
     public override void AgentReset()
