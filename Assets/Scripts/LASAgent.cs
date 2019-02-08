@@ -109,7 +109,8 @@ public class LASAgent : Agent
         // Take Actions on LEDs
         for(int i = 0; i < ledNum; i += 1)
         {
-            ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(vectorAction[i]);
+            //ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(vectorAction[i]);
+            ledList[i].transform.Find("Point Light").GetComponent<Light>().intensity = vectorAction[i];
         }
 
         // Take Actions on SMAs
@@ -145,7 +146,8 @@ public class LASAgent : Agent
         {
             for (int i = 0; i < ledList.Count(); i += 1)
             {
-                ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(1.0f);
+                //ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(1.0f);
+                ledList[i].transform.Find("Point Light").GetComponent<Light>().intensity = 1;
             }
         }
         if (Input.GetKeyDown(KeyCode.S))
@@ -153,6 +155,7 @@ public class LASAgent : Agent
             for (int i = 0; i < ledList.Count(); i += 1)
             {
                 ledList[i].GetComponent<LEDLightIntensity>().SetLedIntensity(0.0f);
+                ledList[i].transform.Find("Point Light").GetComponent<Light>().intensity = 0;
             }
         }
 

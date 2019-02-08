@@ -17,7 +17,7 @@ public class MoveVisitor : MonoBehaviour
         {
             Vector3 position = this.transform.position;
             var rotation = this.transform.rotation;
-            position.x--;
+            position.x -= 0.5f;
             rotation.y = -90;
             this.transform.position = position;
             this.transform.rotation = Quaternion.Euler(0, -90, 0);
@@ -26,7 +26,7 @@ public class MoveVisitor : MonoBehaviour
         {
             Vector3 position = this.transform.position;
             var rotation = this.transform.rotation;
-            position.x++;
+            position.x += 0.5f;
             rotation.y = 90;
             this.transform.position = position;
             this.transform.rotation = Quaternion.Euler(0, 90, 0);
@@ -35,7 +35,7 @@ public class MoveVisitor : MonoBehaviour
         {
             Vector3 position = this.transform.position;
             var rotation = this.transform.rotation;
-            position.z++;
+            position.z += 0.5f;
             rotation.y = 0;
             this.transform.position = position;
             this.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -44,7 +44,7 @@ public class MoveVisitor : MonoBehaviour
         {
             Vector3 position = this.transform.position;
             var rotation = this.transform.rotation;
-            position.z--;
+            position.z -= 0.5f;
             rotation.y = 180;
             this.transform.position = position;
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
