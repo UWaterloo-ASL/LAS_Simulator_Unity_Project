@@ -5,9 +5,5 @@ using MLAgents;
 
 public class LASAcademy : Academy
 {
-    private void Start()
-    {
-        // Load Breathing Pore
-    }
 
 }
