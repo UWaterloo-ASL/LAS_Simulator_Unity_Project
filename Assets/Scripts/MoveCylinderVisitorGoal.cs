@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class MoveCylinderVisitorGoal : MonoBehaviour
 {
+    public Camera camera;
+
     private Vector3 screenPoint;
     private Vector3 offset;
 
     void OnMouseDown()
     {
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        Debug.Log("click on Goal");
+        screenPoint = camera.WorldToScreenPoint(gameObject.transform.position);
+        offset = gameObject.transform.position - camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
 
     void OnMouseDrag()
     {
         Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+        Vector3 cursorPosition = camera.ScreenToWorldPoint(cursorPoint) + offset;
         transform.position = cursorPosition;
     }
+
 
     // Start is called before the first frame update
     void Start()
