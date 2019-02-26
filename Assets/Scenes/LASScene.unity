@@ -656,7 +656,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.23
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8168495582796330196, guid: 8be5519330e9c4c8ca701247f4e9fb6e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8be5519330e9c4c8ca701247f4e9fb6e, type: 3}
 --- !u!1 &479121799
 GameObject:
@@ -823,6 +824,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 998efef681f4645df8c7be0fe5ccb6f6, type: 3}
+--- !u!1 &709909122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7588541566162816927, guid: 8be5519330e9c4c8ca701247f4e9fb6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 423755470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &709909123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709909122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c0b1029490045ee856fa30f6c501c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: 4bbf43d2352d74ebb90e95455809cc11, type: 2}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 10
 --- !u!1 &879645552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1393,7 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 8499edf70b4f341a0bda86d38d63e4b3, type: 2}
-    - {fileID: 11400000, guid: f5e88b171f8b340bf9a56b35be5097b0, type: 2}
+    - {fileID: 0}
     - {fileID: 11400000, guid: 4bbf43d2352d74ebb90e95455809cc11, type: 2}
     _brainsToControl:
     - {fileID: 11400000, guid: 8499edf70b4f341a0bda86d38d63e4b3, type: 2}
